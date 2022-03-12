@@ -1,53 +1,85 @@
-.random-number-bg {
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('https://assets.ccbp.in/frontend/react-js/random-no-generator-bg.png');
+  background-size: cover;
+  height: 100vh;
+}
 
-  min-height: 100vh;
+.random-number-generator-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-.random-number-card {
   background-color: #ffffff;
-  width: 350px;
-  height: 400px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  width: 80%;
+  border-radius: 16px;
+  border: 1px solid #e4ebf3;
+  padding: 36px;
+  box-shadow: 0px 4px 16px 0px #eaebed;
 }
-.main-heading {
+
+@media screen and (min-width: 768px) {
+  .random-number-generator-container {
+    width: 35%;
+    max-width: 500px;
+  }
+}
+
+.heading {
+  text-align: center;
   color: #0b69ff;
   font-family: 'Roboto';
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
 }
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+}
+
 .description {
+  text-align: center;
   color: #333333;
   font-family: 'Roboto';
   font-size: 14px;
-  font-weight: 600;
-}
-.random-num {
-  color: #0b69ff;
-  font-family: 'Roboto';
-  font-size: 35px;
-  font-weight: 600;
 }
 
-.button {
+@media screen and (min-width: 768px) {
+  .description {
+    font-size: 18px;
+  }
+}
+
+.generate-button {
+  background-color: #0b69ff;
   color: #ffffff;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
   border: none;
-  border-radius: 12px;
-  background-color: #0b69ff;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 32px;
-  padding-right: 32px;
-  cursor: pointer;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  margin-top: 14px;
   outline: none;
+  cursor: pointer;
+}
+
+.random-number {
+  color: #0b69ff;
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .random-number {
+    font-size: 48px;
+  }
 }
